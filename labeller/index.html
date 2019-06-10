@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body >
+    <div id="selector">
+      <h3>Select images to tag.</h3>
+      <div id='Message'></div>
+      <input type='file' id="images" name="image_picker" accept=".jpg, .jpeg, .png" onchange="processImageSelection();" multiple>
+    </div>
+    <div id="processing" style="visibility:hidden;">
+       <p class="message">Tag objects by drawing a box around the object you want to tag. Start by clicking down on the top left corner of the object you want to tag, move over to the bottom right corner and release the click.</p>
+       <div class='outerwrapper'>
+         <div class='innerwrapper'>
+           <img src='' id="imgelem" class='coveredImage' />
+	   <canvas class='canvas'></canvas>
+	 </div>
+       </div>
+       <button id="Next" value="next" onclick="finalizeAndShowNext();">Next</button>
+       <button id="Download" value="Download" onclick="DownloadTags();" style="visibility:hidden;" >Download</button>
+    </div>
+  </body>
+</html>
